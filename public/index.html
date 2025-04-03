@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Client Test</title>
+</head>
+<body>
+  <h1>Cliente simple</h1>
+  <button onclick="fetchCore()">Llamar a Core</button>
+  <button onclick="fetchGM()">Llamar a GM</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    async function fetchCore() {
+      const res = await fetch('http://localhost:3001/core');
+      const data = await res.json();
+      document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    }
+
+    async function fetchGM() {
+      const res = await fetch('http://localhost:3002/gm');
+      const data = await res.json();
+      document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>
