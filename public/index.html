@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <title>Client Test</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
 </head>
 <body>
-  <h1>Cliente simple</h1>
-  <button onclick="fetchCore()">Llamar a Core</button>
-  <button onclick="fetchGM()">Llamar a GM</button>
+  <h1>Mini Client Test</h1>
+  <div>
+    <button onclick="fetchCore()">Get from Core API</button>
+    <button onclick="fetchGM()">Get from GM API</button>
+  </div>
 
-  <pre id="output"></pre>
+  <pre id="output">Click a button to get data...</pre>
 
   <script>
     async function fetchCore() {
