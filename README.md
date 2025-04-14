@@ -4,5 +4,5 @@ Este repositorio contiene una aplicación frontend básica desarrollada con **HT
 
 Está diseñada para interactuar con:
 
-- `api-core-test`: Microservicio que expone la ruta `/core`.
-- `api-gm-test`: Microservicio que expone la ruta `/gm`.
+- `api-core-test`: Microservicio que expone la ruta `/core` para gestionar mensajes almacenados en una base de datos **MongoDB**.
+- `api-gm-test`: Microservicio que expone la ruta `/gm` para gestionar registros almacenados en una base de datos **PostgreSQL**.
