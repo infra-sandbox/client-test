@@ -66,7 +66,7 @@
 
     async function fetchCore() {
       try {
-        const res = await fetch('http://localhost:3001/core');
+        const res = await fetch('/api-core/core');
         const data = await res.json();
         if (Array.isArray(data) && data.length > 0) {
           document.getElementById('output-core').textContent = data
@@ -82,7 +82,7 @@
 
     async function fetchGM() {
       try {
-        const res = await fetch('http://localhost:3002/gm');
+        const res = await fetch('/api-gm/gm');
         const data = await res.json();
         if (Array.isArray(data) && data.length > 0) {
           document.getElementById('output-gm').textContent = data
@@ -100,7 +100,7 @@
       event.preventDefault();
       const content = document.getElementById('coreInput').value;
       if (!content) return;
-      await fetch('http://localhost:3001/core', {
+      await fetch('/api-core/core', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ content })
@@ -113,7 +113,7 @@
       event.preventDefault();
       const content = document.getElementById('gmInput').value;
       if (!content) return;
-      await fetch('http://localhost:3002/gm', {
+      await fetch('/api-gm/gm', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ content })
